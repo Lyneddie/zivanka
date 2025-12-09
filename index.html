@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM375PT58Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MM375PT58Q');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zivanka Consulting</title>
+    <title>Zivanka Consulting | Your Trusted Accounting & Tax Advisory Partner</title>
     <style>
         * {
             margin: 0;
@@ -22,43 +12,37 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
+            color: #ffffff;
             line-height: 1.6;
-            color: #333;
-            background: #ffffff;
+            overflow-x: hidden;
         }
 
-        /* Header */
         header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
         }
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: #235b9d;
-            letter-spacing: 1px;
+            font-weight: bold;
+            color: #64b5f6;
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -68,333 +52,339 @@
         }
 
         .nav-links a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #235b9d;
+            color: #64b5f6;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #235b9d;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #235b9d;
-            color: white;
-            min-height: 90vh;
-            display: flex;
+        .hero-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            margin-top: 80px;
         }
 
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            font-size: 2.7rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+        .hero-content h1 {
+            font-size: 3.5rem;
             line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero p {
+        .hero-content p {
             font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
+            color: #b0bec5;
+            margin-bottom: 2rem;
+            line-height: 1.8;
         }
 
-        .hero-buttons {
+        .hero-cta {
             display: flex;
             gap: 1.5rem;
-            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .btn-primary {
-            background: #ffffff;
-            color: #235b9d;
+        .primary-button {
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            color: #0a1628;
             padding: 1rem 2.5rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.4);
         }
 
-        .btn-secondary {
+        .secondary-button {
             background: transparent;
-            color: white;
+            color: #64b5f6;
             padding: 1rem 2.5rem;
-            border: 2px solid white;
-            border-radius: 5px;
+            border: 2px solid #64b5f6;
+            border-radius: 50px;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .btn-secondary:hover {
-            background: white;
-            color: #235b9d;
+        .secondary-button:hover {
+            background: #64b5f6;
+            color: #0a1628;
         }
 
-        /* Stats Section */
-        .stats {
-            background: #f8f9fa;
-            padding: 4rem 2rem;
-        }
-
-        .stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
+        .hero-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
 
-        .stat-card {
+        .stat-box {
+            background: rgba(26, 41, 66, 0.8);
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
             text-align: center;
-            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+            border-color: #64b5f6;
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.2);
         }
 
         .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #235b9d;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #64b5f6;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            color: #666;
-            font-size: 1.1rem;
+            color: #b0bec5;
+            font-size: 1rem;
         }
 
-        /* Services Section */
-        .services,
-        .tools {
-            padding: 6rem 2rem;
-            background: #ffffff;
+        .services-section {
+            max-width: 1400px;
+            margin: 5rem auto;
+            padding: 0 2rem;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #235b9d;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: #64b5f6;
             margin-bottom: 1rem;
         }
 
-        .section-subtitle {
-            text-align: center;
-            font-size: 2.0rem;
-            font-weight: 700;
-            color: #235b9d;
-            margin-bottom: 1rem;
-        }
-
-        .section-explanation {
-            text-align: center;
+        .section-header p {
             font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 4rem;
+            color: #b0bec5;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-list {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        .services-grid,
-        .features-grid {
-            max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        .service-card,
-        .feature-card {
-            background: #ffffff;
+        .service-card {
+            background: rgba(26, 41, 66, 0.6);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 20px;
             padding: 2.5rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
-        .service-card:hover,
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(35, 91, 157, 0.1);
-            border-color: #235b9d;
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.25);
+            border-color: #64b5f6;
         }
 
         .service-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
         }
 
         .service-card h3 {
-            color: #235b9d;
-            font-size: 1.5rem;
+            color: #64b5f6;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            font-weight: 600;
         }
 
         .service-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1rem;
+            color: #b0bec5;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
 
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
+        .service-features {
+            list-style: none;
+            margin-top: 1.5rem;
         }
 
-        .features-container {
-            max-width: 1200px;
+        .service-features li {
+            color: #b0bec5;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #64b5f6;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            color: #64b5f6;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            transition: gap 0.3s ease;
+        }
+
+        .learn-more:hover {
+            gap: 1rem;
+        }
+
+        .why-section {
+            background: linear-gradient(135deg, rgba(100, 181, 246, 0.1) 0%, rgba(66, 165, 245, 0.1) 100%);
+            padding: 5rem 2rem;
+            margin: 5rem 0;
+        }
+
+        .why-container {
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        .feature-row {
+        .why-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .feature-row:nth-child(even) {
-            direction: rtl;
+        .why-card {
+            background: rgba(26, 41, 66, 0.7);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .feature-row:nth-child(even) > * {
-            direction: ltr;
+        .why-card:hover {
+            transform: translateY(-5px);
+            background: rgba(26, 41, 66, 0.9);
         }
 
-        .feature-content h3 {
-            font-size: 2rem;
-            color: #235b9d;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
+        .why-card h3 {
+            color: #64b5f6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-card p {
+            color: #b0bec5;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(100, 181, 246, 0.15) 0%, rgba(66, 165, 245, 0.15) 100%);
+            border: 2px solid #64b5f6;
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 5rem auto;
+            max-width: 1000px;
+        }
+
+        .cta-section h2 {
+            color: #64b5f6;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #b0bec5;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
         }
 
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            color: #333;
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1rem;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #235b9d;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .feature-visual {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 4rem;
-            border: 1px solid #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 350px;
-            font-size: 6rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #235b9d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .author-info h4 {
-            color: #235b9d;
-            font-weight: 600;
-        }
-
-        .author-info p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
+        .contact-section {
+            max-width: 1200px;
+            margin: 5rem auto;
+            padding: 0 2rem;
         }
 
         .contact-container {
-            max-width: 700px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: rgba(26, 41, 66, 0.6);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .contact-info h3 {
+            color: #64b5f6;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #64b5f6;
+            min-width: 30px;
+        }
+
+        .contact-details p {
+            color: #b0bec5;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: #64b5f6;
+            text-decoration: none;
         }
 
         .contact-form {
-            background: #ffffff;
+            background: rgba(26, 41, 66, 0.6);
+            border-radius: 20px;
             padding: 3rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
         }
 
         .form-group {
@@ -403,341 +393,335 @@
 
         .form-group label {
             display: block;
-            color: #333;
+            color: #64b5f6;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            font-size: 0.95rem;
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 0.9rem;
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: #333;
+            padding: 0.8rem;
+            background: rgba(10, 22, 40, 0.5);
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            border-radius: 8px;
+            color: #ffffff;
             font-size: 1rem;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #235b9d;
-            box-shadow: 0 0 0 3px rgba(35, 91, 157, 0.1);
         }
 
         .form-group textarea {
-            resize: vertical;
             min-height: 120px;
+            resize: vertical;
         }
 
-        .submit-btn {
-            background: #235b9d;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #1a4575;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(35, 91, 157, 0.2);
-        }
-
-        /* Footer */
         footer {
-            background: #235b9d;
-            color: white;
-            padding: 4rem 2rem 2rem;
+            background: rgba(10, 22, 40, 0.95);
+            padding: 3rem 2rem 2rem;
+            margin-top: 5rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
+        .footer-section h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+            color: #b0bec5;
             text-decoration: none;
-            margin-bottom: 0.8rem;
-            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #64b5f6;
         }
 
         .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(100, 181, 246, 0.2);
+            color: #90a4ae;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
+        @media (max-width: 968px) {
+            .hero-section, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
                 font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .feature-row {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-
-    <header id="header">
+    <header>
         <nav>
-            <a class="logo" href='#home'>ZIVANKA CONSULTING</a>
+            <a href="#home" class="logo">ZIVANKA CONSULTING</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="/services.html">Services</a></li>
-                <li><a href="#features">About us</a></li>
-                <li><a href="/tools.html">Tools & Resources</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero-section" id="home">
         <div class="hero-content">
-            <h1>From bookkeeping to strategic guidance, we help your business thrive with clarity and precision.</h1>
-            <p>We don’t just manage numbers: we empower your business with actionable financial insights. From accurate bookkeeping and tax management to tailored financial strategies, our experienced team ensures your business remains compliant, organized, and poised for growth. We combine deep expertise with a personalized approach, turning complex financial data into clarity, confidence, and smarter decisions.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book A Free Consultation</button>
-                <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Our Services</button>
+            <h1>From Bookkeeping to Strategic Guidance</h1>
+            <p>We help your business thrive with clarity and precision. Transform complex financial data into actionable insights that drive growth and success.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="primary-button">Book Free Consultation</a>
+                <a href="#services" class="secondary-button">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Clients Served</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Compliance Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Secure Access</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-explanation">Helping businesses and individuals manage their finances with clarity and confidence</p>
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive financial solutions tailored to your business needs</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">📊</div>
                 <h3>Accounting & Bookkeeping</h3>
-                <p>We provide reliable, end-to-end accounting and bookkeeping services that give you complete clarity and control over your finances. From monthly financial statements and reconciliations to payroll and AP/AR support, we ensure your books are accurate, organized, and decision-ready. Our streamlined processes help you stay compliant, manage cash flow, and understand the true performance of your business.</p>
+                <p>Complete clarity and control over your finances with accurate, organized, and decision-ready books.</p>
+                <ul class="service-features">
+                    <li>Monthly Financial Statements</li>
+                    <li>Bank Reconciliation</li>
+                    <li>Payroll Processing</li>
+                    <li>AP/AR Management</li>
+                </ul>
+                <a href="#services" class="learn-more">Learn More →</a>
             </div>
+
             <div class="service-card">
                 <div class="service-icon">💎</div>
                 <h3>Tax Planning & Compliance</h3>
-                <p>We simplify tax obligations through strategic planning and full compliance support. Our services include annual and corporate tax preparation, tax optimization strategies, quarterly reviews, and year-end reporting. Whether you’re an individual, a startup, or an established business, we help you minimize risk, reduce your tax burden, and stay fully aligned with Polish and international tax regulations.</p>
+                <p>Strategic tax optimization with full compliance support to minimize your burden legally.</p>
+                <ul class="service-features">
+                    <li>Corporate Tax Preparation</li>
+                    <li>VAT Management</li>
+                    <li>Tax Optimization Strategies</li>
+                    <li>Quarterly Reviews</li>
+                </ul>
+                <a href="#services" class="learn-more">Learn More →</a>
             </div>
+
             <div class="service-card">
                 <div class="service-icon">🎯</div>
-                <h3>Business Registration & Advisory</h3>
-                <p>We guide entrepreneurs and companies through every stage of launching and growing a business. From selecting the right structure and registering your company to ensuring ongoing compliance and preparing key documentation, we help you build a strong, legally sound foundation. Our advisory services support strategic planning, financial organization, and long-term sustainability.</p>
+                <h3>Business Advisory</h3>
+                <p>Expert guidance through every stage of launching and growing your business successfully.</p>
+                <ul class="service-features">
+                    <li>Company Registration</li>
+                    <li>Business Structure Selection</li>
+                    <li>Financial System Setup</li>
+                    <li>Strategic Planning</li>
+                </ul>
+                <a href="#services" class="learn-more">Learn More →</a>
             </div>
         </div>
     </section>
 
-    <section id="features" class="features">
-
-        <div class="pillars-list">
-
-            <h2 class="section-title">About Zivanka Consulting: Beyond Bookkeeping</h2>
-
-            <h3 class="section-subtitle"> Our Philosophy: Clarity, Confidence, and Growth</h3>
-            <p class="section-explanation" style="text-align:left; margin-bottom: 1.5rem;">
-            At <strong>Zivanka Consulting</strong>, we believe that outstanding accounting and tax advisory is not about managing paperwork; it’s about empowering informed business decisions. 
-            For many businesses, financial management is a necessity; for our clients, it’s a competitive advantage.
-            </p>
-            <p class="section-explanation" style="text-align:left">
-            We partner with growing entrepreneurs and established businesses in Wrocław, Poland, and beyond, to transform complex financial data into clear, actionable insights. 
-            We turn the stress of compliance into the confidence you need to scale, ensuring your financial system is a dynamic tool that shows you exactly where you are, how you got here, and where you’re heading.
-            </p>
-
-            <h3 class="section-subtitle">A Trusted Partner</h3>
-            <p class="section-explanation" style="text-align:left">
-            Since our founding, we have operated on the principle that every business deserves comprehensive, personalized support. 
-            We don't just ensure compliance; we help you find the most efficient and strategic path forward under Polish and international regulations.
-            </p>
-
-            <h3 class="section-subtitle">Our Expertise is Built on Three Pillars:</h3>
-            <ul class="section-list">
-                <li><strong>Strategic Tax Planning:</strong> We look beyond basic tax filing to develop tailored tax optimization strategies that legally minimize your burden, whether you're a startup or an established corporation.</li>
-                <li><strong>Precision Accounting & Bookkeeping:</strong> We provide reliable, end-to-end accounting services, from daily reconciliations and payroll management to accurate monthly financial statements, ensuring your books are always organized and audit-ready.</li>
-                <li><strong>Foundation & Advisory:</strong> We guide businesses through crucial stages, from selecting the right legal structure during registration to providing ongoing strategic advice that supports long-term financial health and sustainability.</li>
-            </ul>
-
-            <h3 class="section-subtitle">Why Partner with Zivanka?</h3>
-            <p class="section-explanation" style="text-align:left">
-            Our experienced team of certified accountants and advisors combines deep technical knowledge with a personalized, consultative approach. We are committed to three core values:
-            </p>
-
-            <div class="features-grid">
-
-                <div class="feature-card">
-                    <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1.5rem;">📊</div>
-                    <h3 style="color: #235b9d; font-size: 1.5rem; margin-bottom: 1rem;">Expert Guidance</h3>
-                    <p style="color: #666; line-height: 1.7;">
-                    Benefit from seasoned professionals who translate complex financial and regulatory requirements into simple, practical solutions.
-                    </p>
+    <section class="why-section" id="about">
+        <div class="why-container">
+            <div class="section-header">
+                <h2>Why Partner with Zivanka?</h2>
+                <p>We combine deep expertise with a personalized approach</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">📊</div>
+                    <h3>Expert Guidance</h3>
+                    <p>Certified professionals who translate complex requirements into simple, practical solutions.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1.5rem;">🛠️</div>
-                    <h3 style="color: #235b9d; font-size: 1.5rem; margin-bottom: 1rem;">Tailored Solutions</h3>
-                    <p style="color: #666; line-height: 1.7;">
-                    We understand that a one-size-fits-all approach fails businesses. Our services are fully customizable to meet the specific needs and goals of your unique operation.
-                    </p>
+                <div class="why-card">
+                    <div class="why-icon">🛠️</div>
+                    <h3>Tailored Solutions</h3>
+                    <p>Fully customizable services that meet your specific needs and business goals.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon" style="font-size: 3rem; margin-bottom: 1.5rem;">🔒</div>
-                    <h3 style="color: #235b9d; font-size: 1.5rem; margin-bottom: 1rem;">Reliability & Transparency:</h3>
-                    <p style="color: #666; line-height: 1.7;">
-                    We maintain secure, technology-driven systems and prioritize open communication, guaranteeing precise financial reporting and complete peace of mind.Zivanka Consulting is dedicated to providing the clarity and control necessary to navigate the complexities of modern business finance.
-                    </p>
+                <div class="why-card">
+                    <div class="why-icon">🔒</div>
+                    <h3>Reliability & Transparency</h3>
+                    <p>Secure systems and open communication guaranteeing precise reporting and peace of mind.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>Responsive Support</h3>
+                    <p>Fast response times and accessible experts whenever you need assistance.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌍</div>
+                    <h3>Local & International</h3>
+                    <p>Deep Polish regulatory knowledge combined with international tax expertise.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📈</div>
+                    <h3>Growth-Focused</h3>
+                    <p>Strategic insights that help you leverage financial data for competitive advantage.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Let's Talk</h2>
-        <p class="section-explanation"> Ready to turn your financial system into your most powerful strategic tool? Contact us today for a free consultation.</p>
+    <div class="cta-section">
+        <h2>Ready to Transform Your Financial Operations?</h2>
+        <p>Let's discuss how our comprehensive services can help your business achieve its full potential.</p>
+        <a href="#contact" class="primary-button">Schedule Free Consultation</a>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2>Let's Talk</h2>
+            <p>Ready to turn your financial system into your most powerful strategic tool?</p>
+        </div>
         <div class="contact-container">
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New Contact Form Submission from Zivanka Consulting">
-                <input type="hidden" name="from_name" value="Zivanka Finance Website">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <p><strong>Email</strong></p>
+                        <p><a href="mailto:info@zivanka.pl">info@zivanka.pl</a></p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <p><strong>Phone</strong></p>
+                        <p><a href="tel:+48732845757">+48 732 845 757</a></p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <p><strong>Address</strong></p>
+                        <p>ul. Gajowa 1/8, 50-519 Wrocław, Poland</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="service">Service Interest</label>
-                    <select id="service" name="service">
-                        <option value="">Select a service</option>
-                        <option value="accounting ">Accounting Services</option>
-                        <option value="taxation">Tax Preparation & Advisory</option>
-                        <option value="audit">Audit Preparation & Support</option>
-                        <option value="bookkeeping">Bookkeeping Services</option>
-                        <option value="analysis">Financial Analysis</option>
-                        <option value="reporting">Financial Reporting</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service">
+                            <option>Select a service</option>
+                            <option>Accounting & Bookkeeping</option>
+                            <option>Tax Planning & Compliance</option>
+                            <option>Business Advisory</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message"></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Zivanka Consulting</h3>
+                <h4>Zivanka Consulting</h4>
                 <p>Your Trusted Partner in Accounting, Tax, and Financial Advisory.</p>
             </div>
             <div class="footer-section">
-                <h3>Services</h3>
-                <!-- TODO bring these when we will have content
+                <h4>Services</h4>
                 <a href="#services">Accounting & Bookkeeping</a>
-                <a href="#services">Tax Preparation & Advisory</a>
-                <a href="#services">Audit Preparation & Support</a>
-                <a href="#services">Business Registration & Advisory</a>
-                -->
+                <a href="#services">Tax Planning & Compliance</a>
+                <a href="#services">Business Advisory</a>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
-                <p><a href="#features">About Us</a></p>
-                <p><a href="#contact">Contact</a></p>
+                <h4>Company</h4>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
             </div>
             <div class="footer-section">
-                <h3>Connect</h3>
-                <p>Email: <a href='mailto:info@zivanka.pl'>info@zivanka.pl</a></p>
+                <h4>Connect</h4>
+                <p>Email: info@zivanka.pl</p>
                 <p>Phone: +48 732 845 757</p>
-                <p>Address: ul. Gajowa 1/8, 50&ndash;519 Wrocław, Poland</p>
+                <p>Address: ul. Gajowa 1/8, 50-519 Wrocław, Poland</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Zivanka Consulting. All rights reserved.</p>
+            <p>© 2025 Zivanka Consulting. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth scroll for all links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
+        });
+
+        document.querySelectorAll('.service-card, .why-card, .stat-box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>

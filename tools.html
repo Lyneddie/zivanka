@@ -1,19 +1,9 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM375PT58Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MM375PT58Q');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zivanka Consulting</title>
+    <title>Insights | Zivanka Consulting</title>
     <style>
         * {
             margin: 0;
@@ -22,43 +12,37 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
+            color: #ffffff;
             line-height: 1.6;
-            color: #333;
-            background: #ffffff;
         }
 
-        /* Header */
+        /* Header Navigation */
         header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
         }
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: #235b9d;
-            letter-spacing: 1px;
+            font-weight: bold;
+            color: #64b5f6;
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -68,579 +52,426 @@
         }
 
         .nav-links a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #235b9d;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #235b9d;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            color: #64b5f6;
         }
 
         /* Hero Section */
         .hero {
-            background: #235b9d;
-            color: white;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem 3rem;
             text-align: center;
-            padding: 8rem 2rem 4rem;
-            margin-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: #ffffff;
-            color: #235b9d;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2.5rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #235b9d;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: #f8f9fa;
-            padding: 4rem 2rem;
-        }
-
-        .stats-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #235b9d;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        /* Services Section */
-        .services,
-        .tools {
-            padding: 6rem 2rem;
-            background: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #235b9d;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: center;
             font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(35, 91, 157, 0.1);
-            border-color: #235b9d;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            color: #235b9d;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .features-container {
-            max-width: 1200px;
+            color: #b0bec5;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .feature-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
-
-        .feature-row:nth-child(even) {
-            direction: rtl;
-        }
-
-        .feature-row:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .feature-content h3 {
-            font-size: 2rem;
-            color: #235b9d;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .feature-content p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            color: #333;
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1rem;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #235b9d;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        .feature-visual {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 4rem;
-            border: 1px solid #e0e0e0;
+        /* Filter Tabs */
+        .filter-tabs {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
             display: flex;
-            align-items: center;
             justify-content: center;
-            min-height: 350px;
-            font-size: 6rem;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #235b9d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .author-info h4 {
-            color: #235b9d;
+        .filter-btn {
+            background: rgba(100, 181, 246, 0.1);
+            border: 2px solid #64b5f6;
+            color: #64b5f6;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
             font-weight: 600;
-        }
-
-        .author-info p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .contact-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contact-form {
-            background: #ffffff;
-            padding: 3rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            color: #333;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.9rem;
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: #333;
-            font-size: 1rem;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #235b9d;
-            box-shadow: 0 0 0 3px rgba(35, 91, 157, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            background: #235b9d;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #1a4575;
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #64b5f6;
+            color: #0a1628;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(35, 91, 157, 0.2);
+            box-shadow: 0 4px 15px rgba(100, 181, 246, 0.3);
+        }
+
+        /* Insights Grid */
+        .insights-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .insight-card {
+            background: rgba(26, 41, 66, 0.6);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .insight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.2);
+            border-color: #64b5f6;
+        }
+
+        .insight-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .insight-category {
+            display: inline-block;
+            background: rgba(100, 181, 246, 0.2);
+            color: #64b5f6;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .insight-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .insight-date {
+            color: #90a4ae;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .insight-card p {
+            color: #b0bec5;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            color: #64b5f6;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
         }
 
         /* Footer */
         footer {
-            background: #235b9d;
-            color: white;
-            padding: 4rem 2rem 2rem;
+            background: rgba(10, 22, 40, 0.95);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
+        .footer-section h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+            color: #b0bec5;
             text-decoration: none;
-            margin-bottom: 0.8rem;
-            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #64b5f6;
         }
 
         .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(100, 181, 246, 0.2);
+            color: #90a4ae;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
+            .insights-grid {
+                grid-template-columns: 1fr;
             }
 
             .nav-links {
-                display: none;
+                gap: 1rem;
             }
 
-            .feature-row {
-                grid-template-columns: 1fr;
-                gap: 3rem;
+            .filter-tabs {
+                gap: 0.5rem;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
+            .filter-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
             }
         }
     </style>
 </head>
 <body>
-    <header id="header">
+    <header>
         <nav>
-            <a class="logo" href='/#home'>ZIVANKA CONSULTING</a>
+            <a href="/#home" class="logo">ZIVANKA CONSULTING</a>
             <ul class="nav-links">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="/services.html">Services</a></li>
-                <li><a href="/#features">About us</a></li>
-                <li><a href="#tools">Insights</a></li>
-                <li><a href="/#contact">Contact Us</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="/tools.html">Tools & Resources</a></li>
+                <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="tools" class="tools">
-        <h1>Insights</h1>
-    <p>Expert guidance in Accounting, Tax, Compliance & Advisory</p>
-</section>
-<div class="container">
-    <div class="search-bar">
-        <input type="text" placeholder="Search insights..." />
-    </div>
-    <div class="filters">
-        <button>All</button>
-        <button>Accounting</button>
-        <button>Tax</button>
-        <button>Compliance</button>
-        <button>Advisory</button>
-    </div>
-    <div class="grid">
-        <div class="insight-card">
-            <img src="https://via.placeholder.com/400x200" />
-            <div class="card-content">
-                <h3>Why Year‑End Planning Should Start Early</h3>
-                <p>Smart businesses prepare early to optimize performance and reduce taxes.</p>
-                <a href="#">Read more →</a>
-            </div>
-        </div>
-        <div class="insight-card">
-            <img src="https://via.placeholder.com/400x200" />
-            <div class="card-content">
-                <h3>Understanding VAT in Poland</h3>
-                <p>A complete guide for compliance, deadlines, and filings.</p>
-                <a href="#">Read more →</a>
-            </div>
-        </div>
-        <div class="insight-card">
-            <img src="https://via.placeholder.com/400x200" />
-            <div class="card-content">
-                <h3>Cash Flow Mistakes to Avoid</h3>
-                <p>The most common financial mistakes businesses make and how to fix them.</p>
-                <a href="#">Read more →</a>
-            </div>
-        </div>
-    </div>
-    <div class="pagination">
-        <button>1</button>
-        <button>2</button>
-        <button>Next →</button>
-    </div>
-    <div class="downloads">
-        <h2>Downloadable Resources</h2>
-        <div class="download-item">
-            <h3>Monthly Accounting Checklist</h3>
-            <p>Stay organized with this practical checklist.</p>
-            <a href="#">Download</a>
-        </div>
-        <div class="download-item">
-            <h3>Tax Filing Calendar (Poland)</h3>
-            <p>Never miss a deadline again.</p>
-            <a href="#">Download</a>
-        </div>
-        <div class="download-item">
-            <h3>Cash Flow Template</h3>
-            <p>Track income, expenses, and liquidity effortlessly.</p>
-            <a href="#">Download</a>
-        <p class="section-subtitle">Lorem ipsum</p>
+    <section class="hero" id="insights">
+        <h1>Financial Insights & Expertise</h1>
+        <p>Stay informed with expert analysis, tax updates, and strategic guidance to help your business thrive in an ever-changing financial landscape.</p>
     </section>
+
+    <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterInsights('all')">All Insights</button>
+        <button class="filter-btn" onclick="filterInsights('tax')">Tax Planning</button>
+        <button class="filter-btn" onclick="filterInsights('accounting')">Accounting</button>
+        <button class="filter-btn" onclick="filterInsights('business')">Business Strategy</button>
+        <button class="filter-btn" onclick="filterInsights('compliance')">Compliance</button>
+    </div>
+
+    <div class="insights-container">
+        <div class="insights-grid" id="insightsGrid">
+            <!-- Tax Planning Insights -->
+            <div class="insight-card" data-category="tax">
+                <div class="insight-icon">💰</div>
+                <span class="insight-category">Tax Planning</span>
+                <h3>2025 Polish Tax Reform: What Your Business Needs to Know</h3>
+                <p class="insight-date">December 5, 2025</p>
+                <p>The Polish Ministry of Finance has introduced significant changes to corporate tax rates and VAT regulations. Learn how these reforms impact your tax strategy and what actions you should take before year-end.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="tax">
+                <div class="insight-icon">📊</div>
+                <span class="insight-category">Tax Planning</span>
+                <h3>Strategic Tax Optimization for Growing Businesses</h3>
+                <p class="insight-date">November 28, 2025</p>
+                <p>Discover advanced tax planning strategies that can reduce your effective tax rate by 15-25%. From timing income recognition to leveraging R&D credits, we explore proven methods for sustainable tax efficiency.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="tax">
+                <div class="insight-icon">🌍</div>
+                <span class="insight-category">Tax Planning</span>
+                <h3>Cross-Border Tax Considerations for EU Businesses</h3>
+                <p class="insight-date">November 15, 2025</p>
+                <p>Operating across European borders? Navigate the complexities of transfer pricing, permanent establishment rules, and VAT obligations with our comprehensive guide to international tax compliance.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <!-- Accounting Insights -->
+            <div class="insight-card" data-category="accounting">
+                <div class="insight-icon">📈</div>
+                <span class="insight-category">Accounting</span>
+                <h3>Financial Statement Analysis: Key Metrics Every CEO Should Monitor</h3>
+                <p class="insight-date">December 1, 2025</p>
+                <p>Beyond revenue and profit, certain financial ratios reveal the true health of your business. Learn which metrics matter most and how to interpret them for better decision-making.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="accounting">
+                <div class="insight-icon">💼</div>
+                <span class="insight-category">Accounting</span>
+                <h3>Cash Flow Management: Avoiding the Profitability Trap</h3>
+                <p class="insight-date">November 22, 2025</p>
+                <p>Profitable on paper but struggling with cash? Discover practical strategies to optimize working capital, accelerate collections, and ensure your business has the liquidity it needs to grow.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="accounting">
+                <div class="insight-icon">🔄</div>
+                <span class="insight-category">Accounting</span>
+                <h3>Transitioning from Cash to Accrual Accounting: A Step-by-Step Guide</h3>
+                <p class="insight-date">November 10, 2025</p>
+                <p>As your business scales, accrual accounting becomes essential for accurate financial reporting and strategic planning. Learn when to make the switch and how to implement it smoothly.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <!-- Business Strategy Insights -->
+            <div class="insight-card" data-category="business">
+                <div class="insight-icon">🎯</div>
+                <span class="insight-category">Business Strategy</span>
+                <h3>Financial Planning for Business Expansion: A CFO's Perspective</h3>
+                <p class="insight-date">November 25, 2025</p>
+                <p>Thinking about opening a new location or launching a new product line? Understand the financial modeling, risk assessment, and capital allocation strategies that support successful expansion.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="business">
+                <div class="insight-icon">💡</div>
+                <span class="insight-category">Business Strategy</span>
+                <h3>Choosing the Right Business Structure in Poland: LLC vs. Sole Proprietorship</h3>
+                <p class="insight-date">November 18, 2025</p>
+                <p>Your business structure affects everything from taxes to liability to growth potential. We break down the pros and cons of each option to help you make the right choice for your venture.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="business">
+                <div class="insight-icon">📱</div>
+                <span class="insight-category">Business Strategy</span>
+                <h3>Digital Transformation in Finance: Tools That Drive Efficiency</h3>
+                <p class="insight-date">November 8, 2025</p>
+                <p>From cloud-based accounting software to AI-powered expense management, modern financial tools can save 10+ hours per week. Explore the technologies transforming how businesses manage their finances.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <!-- Compliance Insights -->
+            <div class="insight-card" data-category="compliance">
+                <div class="insight-icon">🔒</div>
+                <span class="insight-category">Compliance</span>
+                <h3>Year-End Compliance Checklist: Don't Miss These Critical Deadlines</h3>
+                <p class="insight-date">December 3, 2025</p>
+                <p>The end of the fiscal year brings numerous compliance obligations. Our comprehensive checklist ensures you meet all filing requirements and avoid costly penalties in 2025.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="compliance">
+                <div class="insight-icon">⚖️</div>
+                <span class="insight-category">Compliance</span>
+                <h3>GDPR and Financial Data: What Your Business Must Know</h3>
+                <p class="insight-date">November 20, 2025</p>
+                <p>Financial records contain sensitive personal data subject to GDPR regulations. Learn how to ensure your accounting practices comply with data protection requirements and avoid hefty fines.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+
+            <div class="insight-card" data-category="compliance">
+                <div class="insight-icon">📋</div>
+                <span class="insight-category">Compliance</span>
+                <h3>Audit Preparation: How to Keep Your Business Audit-Ready Year-Round</h3>
+                <p class="insight-date">November 12, 2025</p>
+                <p>Audits don't have to be stressful. Implement these best practices for documentation, internal controls, and record-keeping to ensure you're always prepared for regulatory scrutiny.</p>
+                <a href="#" class="read-more">Read Full Article →</a>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Zivanka Consulting</h3>
+                <h4>Zivanka Consulting</h4>
                 <p>Your Trusted Partner in Accounting, Tax, and Financial Advisory.</p>
             </div>
             <div class="footer-section">
-                <h3>Services</h3>
-                <!-- TODO bring these when we will have content
-                <a href="#services">Accounting & Bookkeeping</a>
-                <a href="#services">Tax Preparation & Advisory</a>
-                <a href="#services">Audit Assistance</a>
-                <a href="#services">HR & Payroll</a>
-                -->
+                <h4>Services</h4>
+                <a href="/services.html">Accounting & Bookkeeping</a>
+                <a href="/services.html">Tax Planning & Compliance</a>
+                <a href="/services.html">Business Advisory</a>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
-                <p><a href="#features">About Us</a></p>
-                <p><a href="#contact">Contact</a></p>
+                <h4>Company</h4>
+                <a href="/about.html">About Us</a>
+                <a href="#insights">Insights</a>
+                <a href="/#contact">Contact</a>
             </div>
             <div class="footer-section">
-                <h3>Connect</h3>
-                <p>Email: <a href='mailto:info@zivanka.pl'>info@zivanka.pl</a></p>
+                <h4>Connect</h4>
+                <p>Email: info@zivanka.pl</p>
                 <p>Phone: +48 732 845 757</p>
-                <p>Address: ul. Gajowa 1/8, 50&ndash;519 Wrocław, Poland</p>
+                <p>Address: ul. Gajowa 1/8, 50–519 Wrocław, Poland</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Zivanka Consulting. All rights reserved.</p>
+            <p>© 2025 Zivanka Consulting. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        function filterInsights(category) {
+            const cards = document.querySelectorAll('.insight-card');
+            const buttons = document.querySelectorAll('.filter-btn');
 
-        // Smooth scroll for all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
                 }
+            });
+        }
+
+        // Initialize animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.insight-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
             });
         });
     </script>

@@ -1,19 +1,9 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM375PT58Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-MM375PT58Q');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zivanka Consulting</title>
+    <title>Our Services | Zivanka Consulting</title>
     <style>
         * {
             margin: 0;
@@ -22,43 +12,37 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
+            color: #ffffff;
             line-height: 1.6;
-            color: #333;
-            background: #ffffff;
         }
 
-        /* Header */
+        /* Header Navigation */
         header {
-            background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2rem;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
         }
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: #235b9d;
-            letter-spacing: 1px;
+            font-weight: bold;
+            color: #64b5f6;
             text-decoration: none;
+            letter-spacing: 1px;
         }
 
         .nav-links {
@@ -68,583 +52,668 @@
         }
 
         .nav-links a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #235b9d;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #235b9d;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            color: #64b5f6;
         }
 
         /* Hero Section */
         .hero {
-            background: #235b9d;
-            color: white;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
             text-align: center;
-            padding: 8rem 2rem 4rem;
-            margin-top: 80px;
-        }
-
-        .hero-content {
-            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
-            opacity: 0.95;
+            font-size: 1.2rem;
+            color: #b0bec5;
+            max-width: 800px;
+            margin: 0 auto 2rem;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .btn-primary {
-            background: #ffffff;
-            color: #235b9d;
-            padding: 1rem 2.5rem;
-            border: solid;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2.5rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #235b9d;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: #f8f9fa;
-            padding: 4rem 2rem;
-        }
-
-        .stats-grid {
-            max-width: 1200px;
+        /* Service Cards */
+        .services-container {
+            max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .stat-card {
-            text-align: center;
             padding: 2rem;
         }
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #235b9d;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        /* Services Section */
-        .services,
-        .tools {
-            padding: 6rem 2rem;
-            background: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #235b9d;
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            text-align: left;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-subtitle p {
-            margin-bottom: 1.5rem;
-        }
-
-        .section-subtitle ul {
-            margin-left: 2rem;
-            margin-bottom: 1.0rem;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
         .service-card {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s;
+            background: rgba(26, 41, 66, 0.6);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(35, 91, 157, 0.1);
-            border-color: #235b9d;
+            box-shadow: 0 15px 40px rgba(100, 181, 246, 0.2);
+            border-color: #64b5f6;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(100, 181, 246, 0.3);
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            min-width: 80px;
         }
 
-        .service-card h3 {
-            color: #235b9d;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        .service-title h2 {
+            font-size: 2.2rem;
+            color: #64b5f6;
+            margin-bottom: 0.5rem;
         }
 
-        .service-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .features-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
-
-        .feature-row:nth-child(even) {
-            direction: rtl;
-        }
-
-        .feature-row:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .feature-content h3 {
-            font-size: 2rem;
-            color: #235b9d;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .feature-content p {
+        .service-tagline {
+            color: #90a4ae;
             font-size: 1.1rem;
-            color: #666;
+        }
+
+        .service-description {
+            color: #b0bec5;
+            font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 2rem;
         }
 
-        .feature-list {
-            list-style: none;
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
-        .feature-list li {
-            color: #333;
-            padding: 0.8rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1rem;
+        .feature-item {
+            background: rgba(100, 181, 246, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #64b5f6;
+            transition: all 0.3s ease;
         }
 
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #235b9d;
-            font-weight: bold;
-            font-size: 1.3rem;
+        .feature-item:hover {
+            background: rgba(100, 181, 246, 0.1);
+            transform: translateX(5px);
         }
 
-        .feature-visual {
-            background: #ffffff;
-            border-radius: 10px;
-            padding: 4rem;
-            border: 1px solid #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 350px;
-            font-size: 6rem;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #235b9d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-        }
-
-        .author-info h4 {
-            color: #235b9d;
-            font-weight: 600;
-        }
-
-        .author-info p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .contact-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contact-form {
-            background: #ffffff;
-            padding: 3rem;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            color: #333;
+        .feature-item h4 {
+            color: #64b5f6;
             margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: #b0bec5;
             font-size: 0.95rem;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.9rem;
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            color: #333;
-            font-size: 1rem;
-            transition: all 0.3s;
-            font-family: inherit;
+        .benefits-section {
+            background: rgba(100, 181, 246, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #235b9d;
-            box-shadow: 0 0 0 3px rgba(35, 91, 157, 0.1);
+        .benefits-section h3 {
+            color: #64b5f6;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
         }
 
-        .submit-btn {
-            background: #235b9d;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
+        .benefit-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #ffffff;
+        }
+
+        .benefit-badge span {
+            font-size: 1.5rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(100, 181, 246, 0.15) 0%, rgba(66, 165, 245, 0.15) 100%);
+            border: 2px solid #64b5f6;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 900px;
+        }
+
+        .cta-section h2 {
+            color: #64b5f6;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #b0bec5;
             font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
+            margin-bottom: 2rem;
         }
 
-        .submit-btn:hover {
-            background: #1a4575;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(35, 91, 157, 0.2);
+        .cta-button {
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            color: #0a1628;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 181, 246, 0.4);
+        }
+
+        /* Process Section */
+        .process-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .process-section h2 {
+            font-size: 2.5rem;
+            color: #64b5f6;
+            margin-bottom: 3rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            background: rgba(26, 41, 66, 0.6);
+            border: 1px solid rgba(100, 181, 246, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            border-color: #64b5f6;
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
+            color: #0a1628;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .process-step p {
+            color: #b0bec5;
         }
 
         /* Footer */
         footer {
-            background: #235b9d;
-            color: white;
-            padding: 4rem 2rem 2rem;
+            background: rgba(10, 22, 40, 0.95);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
+        .footer-section h4 {
+            color: #64b5f6;
+            margin-bottom: 1rem;
             font-size: 1.2rem;
         }
 
         .footer-section p,
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+            color: #b0bec5;
             text-decoration: none;
-            margin-bottom: 0.8rem;
-            transition: color 0.3s;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: #64b5f6;
         }
 
         .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.8);
+            border-top: 1px solid rgba(100, 181, 246, 0.2);
+            color: #90a4ae;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .hero-buttons {
+            .service-header {
                 flex-direction: column;
+                text-align: center;
+            }
+
+            .service-title h2 {
+                font-size: 1.8rem;
             }
 
             .nav-links {
-                display: none;
+                gap: 1rem;
+                font-size: 0.9rem;
             }
 
-            .feature-row {
+            .service-features,
+            .benefits-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header id="header">
+    <header>
         <nav>
-            <a class="logo" href='/#home'>ZIVANKA CONSULTING</a>
+            <a href="/#home" class="logo">ZIVANKA CONSULTING</a>
             <ul class="nav-links">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="/#features">About us</a></li>
-                <li><a href="/tools.html">Tools & Resources</a></li>
-                <li><a href="/#contact">Contact Us</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/tools.html">Tools</a></li>
+                <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="services" class="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="section-subtitle">
-            <p>We turn financial complexity into business clarity. Whether you're launching your first venture or scaling an established enterprise, we provide the financial foundation and strategic guidance you need to grow with confidence. Our services are designed to work together, giving you complete visibility, compliance, and control over your business finances.</p>
-            <h2>Accounting & Bookkeeping</h2>
-            <p>Accurate financial records are the backbone of every successful business. We deliver comprehensive accounting and bookkeeping services that keep your finances organized, compliant, and ready for analysis at any time.</p>
-            <h2>Our services include:</h2>
-            <ul>
-                <li>Monthly Financial Management</li>
-                <li>General ledger management</li>
-                <li>Bank and account reconciliations</li>
-                <li>Payroll processing</li>
-                <li>Accounts Payable & Accounts Receivable (AP/AR) management</li>
-                <li>Cash flow tracking and financial health monitoring</li>
-            </ul>
-            <p>With Zivanka Consulting, you gain peace of mind knowing your books are managed with precision and your financial data is always decision-ready.</p>
-            <h2>Tax Planning & Compliance</h2>
-            <p>Tax season shouldn’t be stressful. We simplify tax obligations through strategic planning and complete compliance support, helping you optimize savings while meeting all regulatory requirements.</p>
-            <h2>Our tax services include:</h2>
-            <ul>
-                <li>Corporate and individual tax preparation</li>
-                <li>Annual and year-end tax reporting</li>
-                <li>Tax optimization strategies</li>
-                <li>Quarterly tax reviews and planning</li>
-                <li>Compliance & Audit Support</li>
-            </ul>
-            <p>Most businesses overpay on taxes, not because they have to, but because they don't plan ahead. By the time December arrives, your options have narrowed. We work with you throughout the year to ensure you're positioned optimally when it matters most.</p>
-            <p>Whether you’re a freelancer, startup, or established company, we help you minimize risk, reduce your tax burden, and stay confidently compliant.</p>
-            <h2>Business Registration & Advisory</h2>
-            <p>Starting and growing a business requires more than a great idea; it requires a strong legal and financial foundation. We guide entrepreneurs and companies through every stage of registration, compliance, and long-term business planning.</p>
-            <h2>We support you with:</h2>
-            <ul>
-                <li>Choosing the right business structureg</li>
-                <li>Company registration and documentation</li>
-                <li>Regulatory compliance guidance</li>
-                <li>Financial organization and systems setup</li>
-                <li>Ongoing business advisory and strategic plannin</li>
-            </ul>
-            <p>Our goal is to help you build a business that is not only compliant from day one but also scalable, sustainable, and positioned for growth.</p>
-            <h2>Why Choose Zivanka Consulting?</h2>
-            <p>We're Not Just Your Accountants; We're Your Financial Partners</p>
-            <ul>
-                <li>Proactive, Not Reactive: We don't wait for problems to appear. Our approach is strategic and forward-looking-identifying opportunities, flagging risks, and keeping you ahead of compliance deadlines.</li>
-                <li>Personalized support tailored to your business</li>
-                <li>Transparent Pricing, Clear Communication No surprises. No jargon. We explain everything in plain language and provide upfront, predictable pricing for our services.</li>
-            </ul>
-            <p>At Zivanka Consulting, we don’t just manage your numbers — we empower your business.</p>
-            <h2>Book your free consultation today</h2>
-            <p>Let's talk about where your business is now, where you want it to go, and how we can help you get there with confidence.</p>
-            <h2>What to expect:</h2>
-            <ul>
-                <li>30-minute consultation (no obligation)</li>
-                <li>Assessment of your current financial operations</li>
-                <li>Clear recommendations tailored to your business</li>
-                <li>Transparent pricing and service options</li>
-            </ul>
-            <button class="btn-primary" onclick=" window.location.href = '/#contact';">Book A Free Consultation</button>
+    <section class="hero" id="services">
+        <h1>Comprehensive Financial Solutions</h1>
+        <p>From precise bookkeeping to strategic tax planning, we deliver the expertise and personalized support your business needs to thrive in today's competitive landscape.</p>
+    </section>
+
+    <div class="services-container">
+        <!-- Service 1: Accounting & Bookkeeping -->
+        <div class="service-card">
+            <div class="service-header">
+                <div class="service-icon">📊</div>
+                <div class="service-title">
+                    <h2>Accounting & Bookkeeping</h2>
+                    <p class="service-tagline">Complete financial clarity and control for your business</p>
+                </div>
+            </div>
+
+            <p class="service-description">
+                We provide reliable, end-to-end accounting and bookkeeping services that give you complete clarity and control over your finances. Our streamlined processes ensure your books are accurate, organized, and decision-ready, helping you stay compliant, manage cash flow effectively, and understand the true performance of your business.
+            </p>
+
+            <div class="service-features">
+                <div class="feature-item">
+                    <h4>Monthly Financial Statements</h4>
+                    <p>Comprehensive profit & loss statements, balance sheets, and cash flow reports delivered on time, every time.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Bank Reconciliation</h4>
+                    <p>Daily transaction matching and reconciliation to ensure accuracy and catch discrepancies early.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Accounts Payable/Receivable</h4>
+                    <p>Complete AP/AR management including invoice processing, payment tracking, and collection support.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Payroll Processing</h4>
+                    <p>Accurate payroll management including tax withholdings, social security contributions, and compliance reporting.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Expense Management</h4>
+                    <p>Systematic tracking and categorization of business expenses for tax optimization and budgeting.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Financial Analysis & Reporting</h4>
+                    <p>Actionable insights from your financial data to support strategic decision-making and growth planning.</p>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Why Choose Our Accounting Services?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Real-time financial visibility</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Audit-ready documentation</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Reduced financial errors</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Time savings for core business</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Scalable systems for growth</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Expert compliance assurance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Tax Planning & Compliance -->
+        <div class="service-card">
+            <div class="service-header">
+                <div class="service-icon">💎</div>
+                <div class="service-title">
+                    <h2>Tax Planning & Compliance</h2>
+                    <p class="service-tagline">Strategic tax optimization with full compliance support</p>
+                </div>
+            </div>
+
+            <p class="service-description">
+                We simplify tax obligations through strategic planning and comprehensive compliance support. Whether you're an individual, startup, or established corporation, we help you minimize risk, reduce your tax burden legally, and stay fully aligned with Polish and international tax regulations.
+            </p>
+
+            <div class="service-features">
+                <div class="feature-item">
+                    <h4>Corporate Tax Preparation</h4>
+                    <p>Complete CIT (Corporate Income Tax) preparation and filing with strategic optimization strategies.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Individual Tax Filing</h4>
+                    <p>Personal income tax (PIT) preparation for business owners, executives, and international employees.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>VAT Management</h4>
+                    <p>VAT registration, reporting, and compliance including intra-EU transactions and reverse charge mechanisms.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Tax Optimization Strategy</h4>
+                    <p>Proactive tax planning to legally minimize your tax burden through structure optimization and timing strategies.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Quarterly Tax Reviews</h4>
+                    <p>Regular check-ins to ensure estimated payments are accurate and identify mid-year planning opportunities.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Transfer Pricing</h4>
+                    <p>Documentation and compliance for intercompany transactions and related-party dealings.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Tax Authority Representation</h4>
+                    <p>Expert representation during audits, inquiries, and disputes with tax authorities.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>International Tax Compliance</h4>
+                    <p>Cross-border tax planning, double taxation agreements, and foreign income reporting.</p>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Tax Planning Benefits</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Reduced tax liability</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Full regulatory compliance</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Penalty avoidance</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Proactive planning approach</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Audit defense support</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Strategic tax efficiency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Business Registration & Advisory -->
+        <div class="service-card">
+            <div class="service-header">
+                <div class="service-icon">🎯</div>
+                <div class="service-title">
+                    <h2>Business Registration & Advisory</h2>
+                    <p class="service-tagline">Building strong foundations for sustainable growth</p>
+                </div>
+            </div>
+
+            <p class="service-description">
+                We guide entrepreneurs and companies through every stage of launching and growing a business. From selecting the right structure and registering your company to ensuring ongoing compliance and strategic growth planning, we help you build a strong, legally sound foundation for long-term success.
+            </p>
+
+            <div class="service-features">
+                <div class="feature-item">
+                    <h4>Business Structure Selection</h4>
+                    <p>Expert guidance on choosing between sole proprietorship, LLC, corporation, or partnership based on your goals.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Company Registration</h4>
+                    <p>Complete registration services including KRS (National Court Register) filings and all required documentation.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Licensing & Permits</h4>
+                    <p>Assistance obtaining necessary business licenses, permits, and regulatory approvals for your industry.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Financial System Setup</h4>
+                    <p>Establishing accounting systems, chart of accounts, and financial controls from day one.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Business Planning</h4>
+                    <p>Strategic business plan development including financial projections, market analysis, and growth strategies.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Compliance Calendar</h4>
+                    <p>Customized compliance calendar tracking all reporting deadlines, license renewals, and regulatory requirements.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Foreign Investment Support</h4>
+                    <p>Specialized guidance for international investors establishing operations in Poland.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Growth Advisory</h4>
+                    <p>Ongoing strategic advice on expansion, financing, restructuring, and long-term sustainability.</p>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Advisory Service Benefits</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Right structure from start</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Fast registration process</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Compliance foundation</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Strategic growth planning</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Risk mitigation</p>
+                    </div>
+                    <div class="benefit-badge">
+                        <span>✓</span>
+                        <p>Expert guidance throughout</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <h2>Our Proven Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Discovery</h3>
+                <p>We learn about your business, goals, and challenges through an in-depth consultation.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Strategy</h3>
+                <p>We develop a customized plan tailored to your specific needs and objectives.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Implementation</h3>
+                <p>Our expert team executes the plan with precision, keeping you informed every step.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Ongoing Support</h3>
+                <p>We provide continuous monitoring, updates, and strategic guidance as your business evolves.</p>
+            </div>
         </div>
     </section>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Transform Your Financial Operations?</h2>
+        <p>Let's discuss how our comprehensive services can help your business achieve its full potential.</p>
+        <a href="/#contact" class="cta-button">Schedule Free Consultation</a>
+    </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Zivanka Consulting</h3>
+                <h4>Zivanka Consulting</h4>
                 <p>Your Trusted Partner in Accounting, Tax, and Financial Advisory.</p>
             </div>
             <div class="footer-section">
-                <h3>Services</h3>
-                <!-- TODO bring these when we will have content
+                <h4>Services</h4>
                 <a href="#services">Accounting & Bookkeeping</a>
-                <a href="#services">Tax Preparation & Advisory</a>
-                <a href="#services">Audit Assistance</a>
-                <a href="#services">HR & Payroll</a>
-                -->
+                <a href="#services">Tax Planning & Compliance</a>
+                <a href="#services">Business Registration & Advisory</a>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
-                <p><a href="#features">About Us</a></p>
-                <p><a href="#contact">Contact</a></p>
+                <h4>Company</h4>
+                <a href="/about.html">About Us</a>
+                <a href="/#contact">Contact</a>
             </div>
             <div class="footer-section">
-                <h3>Connect</h3>
-                <p>Email: <a href='mailto:info@zivanka.pl'>info@zivanka.pl</a></p>
+                <h4>Connect</h4>
+                <p>Email: info@zivanka.pl</p>
                 <p>Phone: +48 732 845 757</p>
-                <p>Address: ul. Gajowa 1/8, 50&ndash;519 Wrocław, Poland</p>
+                <p>Address: ul. Gajowa 1/8, 50–519 Wrocław, Poland</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Zivanka Consulting. All rights reserved.</p>
+            <p>© 2025 Zivanka Consulting. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+        // Smooth scroll animation for service cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.service-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
 
-        // Smooth scroll for all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(30px)';
+                        
+                        setTimeout(() => {
+                            entry.target.style.transition = 'all 0.6s ease';
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            cards.forEach(card => {
+                observer.observe(card);
             });
         });
     </script>
