@@ -369,9 +369,21 @@
             }
         }
 
+      .success-icon { width: 56px; height: 56px; margin: 0 auto 1.25rem;
+        /* background-color: #dcfce7; */
+        background-color: #62ba62;
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      }
+
+      .success-icon svg { width: 28px; height: 28px;
+        stroke: #16534a;
+        stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round;
+      }
+
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <a href="#home" class="logo">ZIVANKA CONSULTING</a>
@@ -386,198 +398,27 @@
         </nav>
     </header>
 
+
     <section class="hero-section" id="home">
-        <div class="hero-content">
-
-            <h1>Your Trusted Partner for Business Success in Kenya</h1>
-            <p>
-               Comprehensive accounting, tax compliance, and business registration services
-               for Kenyan businesses and international entrepreneurs.
-               We handle the numbers so you can focus on growth.
-            </p> 
-            <div class="hero-cta">
-                <a href="#contact" class="primary-button">Book Free Consultation</a>
-                <a href="#services" class="secondary-button">Explore Services</a>
-            </div>
+      <div class="service-card">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
         </div>
+        <h1>Form submitted successfully!</h1>
+        <p>
+        Thank you for reaching out to us.<br/>
+        Your message has been received.<br/>
+        We'll get back to you within 24 hours.
+        <div class="hero-cta">
+          <a href="/index.html" class="primary-button">Go back</a>
+        </div>
+        </p>
+      </div>
     </section>
 
-    <section class="services-section" id="services">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Comprehensive financial solutions tailored to your business needs</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📊</div>
-                <h3>Accounting & Bookkeeping</h3>
-                <p>Complete clarity and control over your finances with accurate, organized, and decision-ready books.</p>
-                <ul class="service-features">
-                    <li>Monthly Financial Statements</li>
-                    <li>Bank Reconciliation</li>
-                    <li>Payroll Processing</li>
-                    <li>AP/AR Management</li>
-                </ul>
-                <a href="#services" class="learn-more">Learn More →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">💎</div>
-                <h3>Tax Planning & Compliance</h3>
-                <p>Strategic tax optimization with full compliance support to minimize your burden legally.</p>
-                <ul class="service-features">
-                    <li>Corporate Tax Preparation</li>
-                    <li>VAT Management</li>
-                    <li>Tax Optimization Strategies</li>
-                    <li>Quarterly Reviews</li>
-                </ul>
-                <a href="#services" class="learn-more">Learn More →</a>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>Business Advisory</h3>
-                <p>Expert guidance through every stage of launching and growing your business successfully.</p>
-                <ul class="service-features">
-                    <li>Company Registration</li>
-                    <li>Business Structure Selection</li>
-                    <li>Financial System Setup</li>
-                    <li>Strategic Planning</li>
-                </ul>
-                <a href="#services" class="learn-more">Learn More →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-section" id="about">
-        <div class="why-container">
-            <div class="section-header">
-                <h2>Why Partner with Zivanka?</h2>
-                <p>We combine deep expertise with a personalized approach</p>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">📊</div>
-                    <h3>Expert Guidance</h3>
-                    <p>Certified professionals who translate complex requirements into simple, practical solutions.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🛠️</div>
-                    <h3>Tailored Solutions</h3>
-                    <p>Fully customizable services that meet your specific needs and business goals.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🔒</div>
-                    <h3>Reliability & Transparency</h3>
-                    <p>Secure systems and open communication guaranteeing precise reporting and peace of mind.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">⚡</div>
-                    <h3>Responsive Support</h3>
-                    <p>Fast response times and accessible experts whenever you need assistance.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🌍</div>
-                    <h3>Global Service, Local Expertise </h3>
-                    <p>International operational standards combined with deep understanding of Kenyan regulatory environment.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">📈</div>
-                    <h3>Growth-Focused</h3>
-                    <p>Strategic insights that help you leverage financial data for competitive advantage.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="cta-section">
-        <h2>Take Your Financial Clarity to the Next Level</h2>
-        <p>Let's discuss how our comprehensive services can help your business achieve its full potential.</p>
-        <a href="#contact" class="primary-button">Schedule Free Consultation</a>
-    </div>
-
-    <section class="contact-section" id="contact">
-        <div class="section-header">
-            <h2>Let's Talk</h2>
-            <p>Turn complexity into clarity. See how expert financial guidance can give your business a competitive edge.</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-details">
-                        <p><strong>Email</strong></p>
-                        <p><a href="mailto:info@zivanka.eu">info@zivanka.eu</a></p>
-                    </div>
-                </div>
-                <!--
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-details">
-                        <p><strong>Phone</strong></p>
-                        <p><a href="tel:+xxxxxx">+xx xxx xxx xxx</a></p>
-                    </div>
-                </div>
-                -->
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <p><strong>Kenya Office</strong></p>
-                        <p>
-                        Kimathi House, Westlands<br/>
-                        P.O. Box 41174 - 00100<br/>
-                        Nairobi, Kenya
-                        </p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-details">
-                        <p><strong>Poland Office</strong></p>
-                        <p>
-                        ul. Gajowa 1/8<br/>
-                        50-519 Wrocław, Poland
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-form">
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="ddd18652-32b0-4a45-bd88-c8bda0faf83d">
-                    <input type="hidden" name="redirect" value="https://zivanka.eu/thanks.html">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Interest</label>
-                        <select id="service" name="service">
-                            <option value="accounting_bookkeeping">Accounting & Bookkeeping</option>
-                            <option value="tax_compliance_filing">Tax Compliance & Filing</option>
-                            <option value="business_registration">Business Registration & Setup</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Additional information</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <button type="submit" class="primary-button">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
+    <footer style="margin-top: 14rem">
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Zivanka Consulting</h4>
