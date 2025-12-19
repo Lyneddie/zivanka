@@ -456,12 +456,47 @@
             color: #90a4ae;
         }
 
+        .mobile-menu-btn {
+            display: none;
+        }
+
         @media (max-width: 968px) {
             .hero-section, .contact-container {
                 grid-template-columns: 1fr;
             }
             .hero-content h1 {
                 font-size: 2.5rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.8rem;
+                color: #64b5f6;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(10, 22, 40, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            }
+            
+            .nav-links.mobile-open {
+                display: flex;
+            }
+            
+            .nav-links li {
+                text-align: center;
             }
         }
     </style>
@@ -470,6 +505,7 @@
     <header>
         <nav>
             <a href="#home" class="logo">ZIVANKA CONSULTING</a>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="/services.html">Services</a></li>
@@ -690,6 +726,27 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('mobile-open');
+                    this.textContent = navLinks.classList.contains('mobile-open') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navLinks.classList.remove('mobile-open');
+                        mobileMenuBtn.textContent = '☰';
+                    });
+                });
+            }
         });
 
         const observer = new IntersectionObserver((entries) => {
