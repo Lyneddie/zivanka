@@ -4,63 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights | Zivanka Consulting</title>
+    <link rel="stylesheet" href="/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        /* Header Navigation */
-        header {
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #64b5f6;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #64b5f6;
-        }
 
         /* Hero Section */
         .hero {
@@ -194,50 +139,6 @@
             gap: 1rem;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(10, 22, 40, 0.95);
-            padding: 3rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: #64b5f6;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #b0bec5;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #64b5f6;
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(100, 181, 246, 0.2);
-            color: #90a4ae;
-        }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -245,10 +146,6 @@
 
             .insights-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                gap: 1rem;
             }
 
             .filter-tabs {
@@ -266,6 +163,7 @@
     <header>
         <nav>
             <a href="/#home" class="logo">ZIVANKA CONSULTING</a>
+            <button class="mobile-menu-btn">☰</button>
             <ul class="nav-links">
                 <li><a href="/#home">Home</a></li>
                 <li><a href="/services.html">Services</a></li>
@@ -436,6 +334,29 @@
     </footer>
 
     <script>
+
+        // Hamburger menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('mobile-open');
+                    this.textContent = navLinks.classList.contains('mobile-open') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navLinks.classList.remove('mobile-open');
+                        mobileMenuBtn.textContent = '☰';
+                    });
+                });
+            }
+        });
+
         function filterInsights(category) {
             const cards = document.querySelectorAll('.insight-card');
             const buttons = document.querySelectorAll('.filter-btn');

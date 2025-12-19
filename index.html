@@ -3,65 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zivanka Consulting | Your Trusted Accounting & Tax Advisory Partner</title>
+    <title>Zivanka Consulting</title>
+    <link rel="stylesheet" href="/style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0a1629 0%, #1a2942 100%);
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #64b5f6;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #64b5f6;
-        }
-
+        /* Hero Section */
         .hero-section {
             max-width: 1400px;
             margin: 0    auto;
@@ -414,89 +360,12 @@
             resize: vertical;
         }
 
-        footer {
-            background: rgba(10, 22, 40, 0.95);
-            padding: 3rem 2rem 2rem;
-            margin-top: 5rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: #64b5f6;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: #b0bec5;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a:hover {
-            color: #64b5f6;
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(100, 181, 246, 0.2);
-            color: #90a4ae;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-        }
-
-        @media (max-width: 968px) {
+        @media (max-width: 768px) {
             .hero-section, .contact-container {
                 grid-template-columns: 1fr;
             }
             .hero-content h1 {
                 font-size: 2.5rem;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-                font-size: 1.8rem;
-                color: #64b5f6;
-                cursor: pointer;
-                padding: 0.5rem;
-            }
-            
-            .nav-links {
-                display: none;
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: rgba(10, 22, 40, 0.98);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            }
-            
-            .nav-links.mobile-open {
-                display: flex;
-            }
-            
-            .nav-links li {
-                text-align: center;
             }
         }
     </style>
@@ -728,6 +597,7 @@
             });
         });
 
+        // Hamburger menu
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
             const navLinks = document.querySelector('.nav-links');
