@@ -11,7 +11,7 @@
         .hero {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 4rem 2rem 0 2rem;
             text-align: center;
         }
 
@@ -38,12 +38,13 @@
             padding: 1rem 2rem;
             margin: 2rem auto;
             max-width: 1200px;
+            border-radius: 20px;
         }
-        
+
         .alert-banner strong {
             color: #92400e;
         }
-        
+
         .alert-banner p {
             color: #78350f;
             line-height: 1.6;
@@ -292,7 +293,7 @@
                 <li><a href="/#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="/about.html">About Us</a></li>
-                <li><a href="/tools.html">Insights</a></li>
+                <!-- <li><a href="/tools.html">Insights</a></li> -->
                 <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
@@ -309,9 +310,9 @@
             Missing records = disallowed deductions, higher tax bills, and penalties. <strong>Get eTIMS-ready now.</strong></p>
     </div>
 
-    <div class="services-container">
+    <div class="services-container" id="accounting">
         <!-- Service 1: Accounting & Bookkeeping -->
-        <div class="service-card">
+        <div class="service-card" >
             <div class="service-header">
                 <div class="service-icon">📊</div>
                 <div class="service-title">
@@ -381,7 +382,7 @@
         </div>
 
         <!-- Service 2: Tax Planning & Compliance -->
-        <div class="service-card">
+        <div class="service-card" id="tax">
             <div class="service-header">
                 <div class="service-icon">💎</div>
                 <div class="service-title">
@@ -476,7 +477,7 @@
         </div>
 
         <!-- Service 3: Business Registration & Advisory -->
-        <div class="service-card">
+        <div class="service-card" id="business">
             <div class="service-header">
                 <div class="service-icon">🎯</div>
                 <div class="service-title">
@@ -596,9 +597,9 @@
             </div>
             <div class="footer-section">
                 <h4>Services</h4>
-                <a href="#services">Accounting & Bookkeeping</a>
-                <a href="#services">Tax Planning & Compliance</a>
-                <a href="#services">Business Registration & Advisory</a>
+                <a href="#accounting">Accounting & Bookkeeping</a>
+                <a href="#tax">Tax Compliance & Filing</a>
+                <a href="#business">Business Registration & Setup</a>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
