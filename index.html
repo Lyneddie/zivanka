@@ -360,6 +360,16 @@
             resize: vertical;
         }
 
+        .form-group select option:first-child {
+            color: #b8a89a;
+            font-weight: 300;
+            opacity: 0.5;
+        }
+
+        .form-group select option:not(:first-child) {
+            color: #3e2723;
+        }
+
         @media (max-width: 768px) {
             .hero-section, .contact-container {
                 grid-template-columns: 1fr;
