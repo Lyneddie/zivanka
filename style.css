@@ -41,6 +41,7 @@ nav {
   color: #d4a574;
   text-decoration: none;
   letter-spacing: 1px;
+  padding-left: 0;
 }
 
 .nav-links {
@@ -128,11 +129,12 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(10, 22, 40, 0.98);
+    background: rgba(109, 76, 65, 0.95) !important;
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 999;
   }
 
   .nav-links.mobile-open {
